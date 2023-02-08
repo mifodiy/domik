@@ -1,3 +1,7 @@
+:root {
+	--logo-color:#fff;
+}
+
 html,
 body {
 	height: 100%;
@@ -21,9 +25,21 @@ body {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1400px;
 	padding: 0 15px;
 	margin: 0 auto;
+
+	@include mq("desktop-2"){
+		max-width: 1300px;
+	}
+}
+
+.btn {
+	padding: 7px 30px 9px 30px;
+	color: #fff;
+	background-color: $accent;
+	border: 1px solid $accent;
+	border-radius: 200px;
 }
 
 .sr-only {

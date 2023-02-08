@@ -1,0 +1,14 @@
+.logo {
+
+  margin-right: 40px;
+
+  &__color{
+    fill: $text;
+  }
+
+  svg {
+    display: block;
+  }
+ 
+}
+

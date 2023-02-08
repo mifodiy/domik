@@ -1,0 +1,90 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  font-size: 18px;
+  line-height: 1.2;
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__center,
+  &__right {
+    .header__link:not(:last-child){
+      margin-right: 30px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__location {
+    margin-right: 25px;
+  }
+
+  &__link {
+    display: inline-block;
+
+    &--favor {
+      width: 26px;
+      height: 26px;
+      mask-image: url("../images/sprite.svg#favorite");
+      background-color: $accent;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &--search {
+      position: relative;
+      padding-left: 32px;
+
+      &::before {
+        @include pseudo;
+        width: 24px;
+        height: 24px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        mask-image: url("../images/sprite.svg#search-icon");
+        background-color: $accent;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+    }
+
+    &--phone {
+      position: relative;
+      padding-left: 27px;
+
+      &::before {
+        @include pseudo;
+        width: 20px;
+        height: 20px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        mask-image: url("../images/sprite.svg#phone-icon");
+        background-color: $accent;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+    }
+  }
+}
