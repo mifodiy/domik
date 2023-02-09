@@ -3,12 +3,12 @@
   margin-bottom: 200px;
   position: relative;
 
-&__bg{
-  position: absolute;
-  top: -100px;
-  right: 0;
-  z-index: -1;
-}
+  &__bg {
+    position: absolute;
+    top: -100px;
+    right: 0;
+    z-index: -1;
+  }
 
   &__title {
     margin-bottom: 75px;

@@ -1,0 +1,154 @@
+.house-card {
+  max-width: 440px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 4px 80px rgba(5, 9, 22, 0.08);
+  text-align: left;
+
+  &__box {
+    position: relative;
+  }
+
+  &__img {
+    border-radius: 20px 20px 0 0;
+  }
+
+  &__capacity {
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    background-color: #fff;
+    width: 92px;
+    height: 36px;
+    border-radius: 150px;
+    padding: 7px 12px 8px 39px;
+    font-size: 14px;
+    line-height: 150%;
+    color: #727488;
+
+    &::before {
+      @include pseudo;
+      width: 20px;
+      height: 20px;
+      background-image: url("../images/sprite.svg#people-icon");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      top: 50%;
+      left: 13px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__label {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 4px 20px rgba(21, 22, 34, 0.2);
+    border-radius: 200px;
+    transition: background-color 0.5s ease-in-out;
+
+    &::before {
+      @include pseudo;
+      width: 26px;
+      height: 26px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      mask-image: url("../images/sprite.svg#favorite");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: cover;
+      background-color: $text;
+      transition: background-color 0.5s ease-in-out;
+    }
+  }
+
+  &__input {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+
+    &:checked+.house-card__label {
+      background-color: #fff;
+
+      &::before {
+        background-color: $accent;
+      }
+    }
+  }
+
+  &__content {
+    padding: 30px 30px 40px;
+    position: relative;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__info {
+    font-size: 16px;
+    line-height: 150%;
+    color: #727488;
+    margin-bottom: 27px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 35px;
+
+    &::before {
+      @include pseudo;
+      width: 23px;
+      height: 23px;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    &--bed::before {
+      background-image: url("../images/sprite.svg#bed-icon");
+    }
+
+    &--tennis::before {
+      background-image: url("../images/sprite.svg#tennis-icon");
+    }
+
+    &--bath::before {
+      background-image: url("../images/sprite.svg#bath-icon");
+    }
+
+    &--pool::before {
+      background-image: url("../images/sprite.svg#pool-icon");
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__cost {
+    font-family: 'Raleway', 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 150%;
+  }
+
+  &__detail {
+    position: absolute;
+    bottom: 44px;
+    right: 30px;
+    font-size: 16px;
+    line-height: 150%;
+    color: $accent;
+  }
+}
