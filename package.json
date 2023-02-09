@@ -11,6 +11,8 @@
   "devDependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "@fancyapps/ui": "^4.0.31",
+    "air-datepicker": "^3.3.5",
+    "aos": "^2.3.4",
     "browser-sync": "^2.27.10",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -22,6 +24,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-svg-sprite": "^2.0.0",
     "gulp-uglify-es": "^3.0.0",
+    "gulp-webp": "^4.0.1",
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.6.0",
     "jquery-form-styler": "^2.0.2",
@@ -30,9 +33,6 @@
     "rateyo": "^2.3.2",
     "sass": "^1.54.0",
     "slick-carousel": "^1.8.1",
-    "swiper": "^8.4.4",
-    "aos": "^2.3.4",
-    "gulp-webp": "^4.0.1"
+    "swiper": "^8.4.4"
   }
-  
 }

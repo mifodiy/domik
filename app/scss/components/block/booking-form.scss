@@ -1,0 +1,148 @@
+.booking-form {
+  max-width: 360px;
+  background-color: #fff;
+  padding: 60px 40px;
+  border-radius: 20px;
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    border: 1px solid #333;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #C0C2D7;
+    border-radius: 200px;
+    margin-bottom: 25px;
+
+    &::after {
+      @include pseudo;
+      width: 1px;
+      height: 36px;
+      background-color: #C0C2D7;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__label {
+    margin-left: 20px;
+    color: #444444;
+
+    &--maxdate {
+      margin-left: 90px;
+    }
+  }
+
+  &__input {
+    max-width: 100%;
+    width: 100%;
+    border: 0 solid transparent;
+    outline: 0;
+    background-color: transparent;
+    padding: 13px 20px;
+
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: #C0C2D7;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: 45px;
+  }
+
+//style number field with styler
+
+  .jq-number {
+    width: 100%;
+    outline: 0;
+    margin-bottom: 50px;
+  }
+
+  .jq-number__field .booking-form__number {
+    background-color: #fff;
+    border: 1px solid #C0C2D7;
+    border-radius: 200px;
+    display: block;
+    padding: 13px 20px;
+    width: 100%;
+    outline: 0;
+
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: #C0C2D7;
+    }
+  }
+
+//style for ionRangeSlider
+
+  .irs {
+    width: 240px;
+    margin: 0 auto;
+  }
+
+  .irs-grid {
+    display: none;
+  }
+
+  .irs-bar {
+    display: none;
+  }
+
+  .irs--flat .irs-handle>i:first-child {
+    width: 8px;
+    height: 23px;
+    border-radius: 200px;
+    background-color: #F4683F;
+  }
+
+  .irs-handle.from>i:first-child {
+    margin-left: -5px;
+  }
+
+  .irs-line {
+    height: 1px;
+    top: 32px;
+  }
+
+  .irs--flat .irs-from,
+  .irs--flat .irs-to,
+  .irs--flat .irs-single {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444444;
+    background-color: transparent;
+    padding: 0;
+    padding-right: 5px;
+    bottom: -10px;
+
+
+    &::before {
+      content: "грн";
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: auto;
+      overflow: visible;
+      border: none;
+      margin-left: 0;
+    }
+  }
+
+  .irs-from,
+  .irs-to {
+    bottom: 0;
+    top: auto;
+  }
+
+  .irs-min, irs-max {
+    display: none;
+  }
+}
+

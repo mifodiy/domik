@@ -1,0 +1,112 @@
+.hero {
+  height: 100vh;
+  background-image: url('../images/hero-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__inner {
+    padding-top: 222px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__content {
+    max-width: 680px;
+    color: #fff;
+  }
+
+  &__form {
+    margin-left: 350px;
+    margin-top: 20px;
+  }
+
+  &__title {
+    font-family: 'Raleway', 'Arial', sans-serif;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    max-width: 470px;
+    font-size: 25px;
+    line-height: 1.5;
+    margin-bottom: 90px;
+
+    p:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__selections{
+    position: relative;
+    max-width: 660px;
+    margin-bottom: 80px;
+  }
+
+
+  &__social {
+    width: 205px;
+  }
+
+  .hero-slider {
+    max-width: 560px;
+    margin: 0 50px;
+
+    &__wrapper{
+      position: relative;
+
+      &::after {
+        @include pseudo;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 16px;
+        background-color: rgba(#121626, 0.2);
+        z-index: 2;
+      }
+    }
+
+    
+    &__img {
+      border-radius: 16px;
+      
+
+    }
+    
+    &__link {
+      display: block;
+      box-shadow: inset 0 0 0 1000px #121626;
+
+      
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+
+    width: 30px;
+    height: 30px;
+    top: 65px;
+    right: 0;
+
+    &::after {
+      content: '';
+      width: 10px;
+      height: 16px;
+      background-image: url("../images/sprite.svg#chevron-next");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  .swiper-button-prev{
+    left: 0;
+    transform: rotate(180deg);
+  }
+}

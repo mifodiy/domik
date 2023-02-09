@@ -1,10 +1,12 @@
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   padding: 20px 0;
   font-size: 18px;
   line-height: 1.2;
+  color: #fff;
 
   &__menu {
     display: flex;
@@ -41,7 +43,7 @@
       width: 26px;
       height: 26px;
       mask-image: url("../images/sprite.svg#favorite");
-      background-color: $accent;
+      background-color: #fff;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -59,7 +61,7 @@
         top: 50%;
         transform: translateY(-50%);
         mask-image: url("../images/sprite.svg#search-icon");
-        background-color: $accent;
+        background-color: #fff;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -79,12 +81,17 @@
         top: 50%;
         transform: translateY(-50%);
         mask-image: url("../images/sprite.svg#phone-icon");
-        background-color: $accent;
+        background-color: #fff;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
       }
 
     }
+  }
+
+  &__btn {
+    background-color: transparent;
+    border-color: #fff;
   }
 }

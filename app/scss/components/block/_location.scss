@@ -21,7 +21,7 @@
 		cursor: pointer;
 		position: relative;
 		text-align: left;
-		color: $text;
+		color: #fff;
 
 		&::after {
       @include pseudo;
@@ -31,7 +31,7 @@
       width: 11px;
       height: 7px;
       mask-image: url("../images/sprite.svg#chevron-down");
-      background-color: $text;
+      background-color: #fff;
       mask-position: center;
       mask-size: cover;
       mask-repeat: no-repeat;

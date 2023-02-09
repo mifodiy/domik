@@ -85,6 +85,7 @@ function scripts() {
         'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
         'node_modules/aos/dist/aos.js',
         'node_modules/swiper/swiper-bundle.js',
+        'node_modules/air-datepicker/air-datepicker.js',
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))

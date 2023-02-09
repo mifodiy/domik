@@ -1,0 +1,26 @@
+.social-list {
+	display: flex;
+	justify-content: space-between;
+
+	&__item {
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	&__link {
+		width: 29px;
+		height: 25px;
+		mask-size: contain;
+		mask-position: center;
+		mask-repeat: no-repeat;
+		background-color: #C0C2D7;
+
+		&:hover{
+			background-color: #35A794;
+		}
+
+	}
+}
