@@ -10,6 +10,10 @@
   z-index: 10;
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 
+  @include mq("desktop-2") {
+    font-size: 14px;
+  }
+
   &.sticky {
     background-color: #fff;
     color: $text;
@@ -47,6 +51,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 60px;
+
+    @include mq("desktop-2") {
+      max-width: 1330px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
   }
 
   &__left {
@@ -54,20 +64,66 @@
     align-items: center;
   }
 
+  &__center {
+
+    @include mq("tablet") {
+      display: none;
+    }
+  }
+
   &__center,
   &__right {
-    .header__link:not(:last-child){
+
+    .header__link:not(:last-child) {
       margin-right: 30px;
+
+      @include mq("desktop") {
+        margin-right: 10px;
+      }
     }
   }
 
   &__right {
     display: flex;
     align-items: center;
+
+    @include mq("tablet") {
+      margin-left: auto;
+    }
+  }
+
+  &__logo {
+    margin-right: 40px;
+
+    @include mq("tablet-2") {
+      margin-right: 15px;
+    }
+
+    svg {
+
+      @include mq("desktop-2") {
+        height: 24px;
+        width: 134px;
+      }
+
+      @include mq("phone") {
+        height: 22px;
+        width: 123px;
+      }
+    }
+
   }
 
   &__location {
     margin-right: 25px;
+
+    @include mq("tablet-2") {
+      margin-right: 10px;
+    }
+
+    @include mq("phone") {
+      display: none;
+    }
   }
 
   &__link {
@@ -82,11 +138,19 @@
       mask-repeat: no-repeat;
       mask-size: cover;
       mask-position: center;
+
+      @include mq("phone") {
+        display: none;
+      }
     }
 
     &--search {
       position: relative;
       padding-left: 32px;
+
+      @include mq("desktop") {
+        font-size: 0;
+      }
 
       &::before {
         @include pseudo;
@@ -107,6 +171,10 @@
     &--phone {
       position: relative;
       padding-left: 27px;
+
+      @include mq("tablet-2") {
+        font-size: 0;
+      }
 
       &::before {
         @include pseudo;
@@ -129,5 +197,61 @@
     background-color: transparent;
     border-color: #fff;
     transition: background-color 0.5s ease-in-out;
+
+    @include mq("desktop-2") {
+      font-size: 14px;
+    }
+
+    @include mq("phone") {
+      display: none;
+    }
   }
+
+  &__burger {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    margin: 0 7px 0 20px;
+    display: none;
+
+    @include mq ('tablet') {
+      display: block;
+    }
+
+    @include mq('phone') {
+      margin-left: 16px;
+    }
+  }
+
+  &__burger::after,
+  &__burger::before {
+    content: '';
+    width: 22px;
+    height: 2px;
+    background-color: $text;
+    border-radius: 4px;
+    display: block;
+    margin-bottom: 7px;
+    transition: transform .3s;
+  }
+
+  &__burger::after {
+    margin-bottom: 0;
+  }
+
+  &__line {
+    background-color: $text;
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin-bottom: 7px;
+    border-radius: 4px;
+    opacity: 1;
+    transition: opacity .6s;
+  }
+  
 }

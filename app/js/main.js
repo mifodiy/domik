@@ -35,9 +35,7 @@ $(function () {
 
   const heroSlider = document.querySelector('.hero-slider');
 
-  console.log(heroSlider.nextElementSibling.nextElementSibling);
-  console.log(heroSlider.nextElementSibling);
-
+ if (heroSlider != null) {
   const heroSwiper = new Swiper(heroSlider, {
     loop: true,
     slidesPerView: 3,
@@ -49,6 +47,7 @@ $(function () {
       prevEl: heroSlider.nextElementSibling,
     },
   })
+ }
 
   $(".booking-form__number").styler({
     
@@ -65,4 +64,21 @@ $(function () {
       header.removeClass("sticky");
     }
   });
+
+  const burger = document.querySelector('.header__burger');
+  const closeMenu = document.querySelector('.side-menu__btn');
+  const mobileMenu = document.querySelector('.side-menu');
+
+  if (burger != null) {
+    burger.addEventListener('click', () => {
+      mobileMenu.classList.add('side-menu--active');
+    });
+  }
+
+  if (closeMenu != null) {
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.remove('side-menu--active');
+    });
+  }
+
 });
