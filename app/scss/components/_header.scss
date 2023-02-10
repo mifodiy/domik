@@ -7,6 +7,40 @@
   font-size: 18px;
   line-height: 1.2;
   color: #fff;
+  z-index: 10;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+
+  &.sticky {
+    background-color: #fff;
+    color: $text;
+    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+
+    .logo__color {
+      fill: $text;
+    }
+
+    .header__btn {
+      background-color: $accent;
+      border-color: transparent;
+    }
+
+    .location__button {
+      color: $text;
+    }
+
+    .header__link {
+
+      &--favor {
+        background-color: $accent;
+      }
+
+      &--search::before,
+      &--phone::before {
+        background-color: $text;
+      }
+
+    }
+  }
 
   &__menu {
     display: flex;
@@ -38,15 +72,16 @@
 
   &__link {
     display: inline-block;
+    transition: background-color 0.5s ease-in-out;
 
     &--favor {
       width: 26px;
       height: 26px;
       mask-image: url("../images/sprite.svg#favorite");
       background-color: #fff;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      mask-position: center;
     }
 
     &--search {
@@ -62,9 +97,9 @@
         transform: translateY(-50%);
         mask-image: url("../images/sprite.svg#search-icon");
         background-color: #fff;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        mask-position: center;
       }
 
     }
@@ -82,9 +117,9 @@
         transform: translateY(-50%);
         mask-image: url("../images/sprite.svg#phone-icon");
         background-color: #fff;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        mask-position: center;
       }
 
     }
@@ -93,5 +128,6 @@
   &__btn {
     background-color: transparent;
     border-color: #fff;
+    transition: background-color 0.5s ease-in-out;
   }
 }

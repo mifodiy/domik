@@ -53,4 +53,16 @@ $(function () {
   $(".booking-form__number").styler({
     
   });
+
+  const header = $(".header");
+  const scrollChange = 50;
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= scrollChange) {
+      header.addClass('sticky');
+    } else {
+      header.removeClass("sticky");
+    }
+  });
 });

@@ -1,9 +1,10 @@
 .logo {
 
   margin-right: 40px;
+  transition: fill 0.5s ease-in-out;
 
   &__color{
-    fill: $text;
+    fill: #fff;
   }
 
   svg {
