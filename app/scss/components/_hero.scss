@@ -137,32 +137,10 @@
     }
   }
 
-  .hero-slider {
+  &__slider {
     max-width: 560px;
     margin: 0 50px;
 
-    &__wrapper {
-      position: relative;
-
-      &::after {
-        @include pseudo;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border-radius: 16px;
-        background-color: rgba(#121626, 0.2);
-        z-index: 2;
-      }
-    }
-
-    &__img {
-      border-radius: 16px;
-    }
-
-    &__link {
-      display: block;
-    }
   }
 
   .swiper-button-prev,

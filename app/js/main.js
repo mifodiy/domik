@@ -33,7 +33,7 @@ $(function () {
     to: 50000
   });
 
-  const heroSlider = document.querySelector('.hero-slider');
+  const heroSlider = document.querySelector('.hero__slider');
 
  if (heroSlider != null) {
   const heroSwiper = new Swiper(heroSlider, {

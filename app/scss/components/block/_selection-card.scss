@@ -1,0 +1,32 @@
+.selection-card {
+
+  &__wrapper {
+    position: relative;
+    margin-bottom: 10px;
+    display: inline-block;
+
+    &::after {
+      @include pseudo;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 16px;
+      background-color: rgba(#121626, 0.2);
+      z-index: 2;
+    }
+  }
+
+  &__img {
+    border-radius: 16px;
+  }
+
+  &__title {
+    display: block;
+  }
+
+  &__link {
+    display: block;
+    text-align: center;
+  }
+}
