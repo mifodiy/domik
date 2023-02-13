@@ -5,20 +5,47 @@
   background-size: cover;
   background-position: center;
 
+  @include mq("phone") {
+    text-align: center;
+    background-image: url('../images/hero-mobile-bg.png');
+    height: calc(100vh - 130px);
+  }
+
   &__inner {
     padding-top: 222px;
     display: flex;
+    justify-content: space-between;
     align-items: flex-start;
   }
 
   &__content {
     max-width: 680px;
     color: #fff;
+
+    @include mq("desktop-2") {
+      margin-right: 20px;
+    }
+
+    @include mq("desktop") {
+      max-width: 530px;
+    }
   }
 
   &__form {
-    margin-left: 350px;
+    margin-right: 80px;
     margin-top: 20px;
+
+    @include mq("desktop-2") {
+      margin-right: 110px;
+    }
+
+    @include mq("desktop") {
+      margin-right: 0;
+    }
+
+    @include mq ("tablet-2") {
+      display: none;
+    }
   }
 
   &__title {
@@ -28,6 +55,19 @@
     line-height: 1.4;
     letter-spacing: 0.02em;
     margin-bottom: 30px;
+
+    @include mq("desktop-2") {
+      font-size: 56px;
+    }
+
+    @include mq("desktop") {
+      font-size: 46px;
+    }
+
+    @include mq("phone") {
+      font-size: 40px;
+      margin-bottom: 22px;
+    }
   }
 
   &__text {
@@ -36,27 +76,72 @@
     line-height: 1.5;
     margin-bottom: 90px;
 
+    @include mq("desktop-2") {
+      font-size: 22px;
+    }
+
+    @include mq("desktop") {
+      font-size: 20px;
+    }
+
+    @include mq("phone") {
+      display: none;
+
+    }
+
     p:not(:last-child) {
       margin-bottom: 10px;
     }
   }
 
-  &__selections{
+  &__selections {
     position: relative;
     max-width: 660px;
     margin-bottom: 80px;
-  }
 
+    @include mq("desktop-2") {
+      margin-bottom: 70px;
+    }
+
+    @include mq("phone") {
+      display: none;
+    }
+  }
 
   &__social {
     width: 205px;
+
+    @include mq("phone") {
+      display: none;
+    }
+  }
+
+  &__mobiletext {
+    display: none;
+    font-size: 18px;
+    margin-bottom: 50px;
+    line-height: 1.5;
+
+    @include mq("phone") {
+      display: block;
+    }
+  }
+
+  &__mobilebtn {
+    padding: 13px 30px 15px;
+    display: none;
+    width: 100%;
+
+    @include mq("phone") {
+      display: inline-block;
+    }
   }
 
   .hero-slider {
     max-width: 560px;
     margin: 0 50px;
 
-    &__wrapper{
+    &__wrapper {
       position: relative;
 
       &::after {
@@ -71,18 +156,12 @@
       }
     }
 
-    
     &__img {
       border-radius: 16px;
-      
-
     }
-    
+
     &__link {
       display: block;
-      box-shadow: inset 0 0 0 1000px #121626;
-
-      
     }
   }
 
@@ -105,7 +184,7 @@
     }
   }
 
-  .swiper-button-prev{
+  .swiper-button-prev {
     left: 0;
     transform: rotate(180deg);
   }

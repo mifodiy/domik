@@ -30,6 +30,10 @@
 
     .location__button {
       color: $text;
+
+      &::after {
+        background-color: $text;
+      }
     }
 
     .header__link {
@@ -232,7 +236,7 @@
     content: '';
     width: 22px;
     height: 2px;
-    background-color: $text;
+    background-color: #fff;
     border-radius: 4px;
     display: block;
     margin-bottom: 7px;
@@ -244,7 +248,7 @@
   }
 
   &__line {
-    background-color: $text;
+    background-color: #fff;
     display: block;
     width: 22px;
     height: 2px;
@@ -253,5 +257,5 @@
     opacity: 1;
     transition: opacity .6s;
   }
-  
+
 }

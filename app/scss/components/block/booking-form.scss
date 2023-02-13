@@ -3,6 +3,10 @@
   background-color: #fff;
   padding: 60px 40px;
   border-radius: 20px;
+  
+  @include mq("desktop-2"){
+    font-size: 14px;
+  }
 
   &__wrapper {
     display: flex;
@@ -13,6 +17,10 @@
     border: 1px solid #C0C2D7;
     border-radius: 200px;
     margin-bottom: 25px;
+
+    @include mq("desktop-2") {
+      margin-bottom: 20px;
+    }
 
     &::after {
       @include pseudo;
@@ -42,17 +50,29 @@
     background-color: transparent;
     padding: 13px 20px;
 
+    @include mq("desktop-2") {
+      padding: 9px 20px 10px;
+    }
+
     &::placeholder {
       font-size: 16px;
       font-weight: 600;
       line-height: 1.5;
       color: #C0C2D7;
+
+      @include mq("desktop-2") {
+        font-size: 14px;
+      }
     }
   }
 
   &__btn {
     width: 100%;
     margin-top: 45px;
+
+    @include mq("desktop-2") {
+      margin-top: 20px;
+    }
   }
 
 //style number field with styler
@@ -61,6 +81,10 @@
     width: 100%;
     outline: 0;
     margin-bottom: 50px;
+
+    @include mq("desktop-2") {
+      margin-bottom: 30px;
+    }
   }
 
   .jq-number__field .booking-form__number {
@@ -83,7 +107,7 @@
 //style for ionRangeSlider
 
   .irs {
-    width: 240px;
+    max-width: 240px;
     margin: 0 auto;
   }
 
@@ -93,6 +117,10 @@
 
   .irs-bar {
     display: none;
+  }
+
+  .irs--flat .irs-handle {
+    top: 3px;
   }
 
   .irs--flat .irs-handle>i:first-child {
@@ -108,7 +136,7 @@
 
   .irs-line {
     height: 1px;
-    top: 32px;
+    top: 13px;
   }
 
   .irs--flat .irs-from,
@@ -120,7 +148,11 @@
     background-color: transparent;
     padding: 0;
     padding-right: 5px;
-    bottom: -10px;
+    bottom: 10px;
+
+    @include mq("desktop-2") {
+      font-size: 14px;
+    }
 
 
     &::before {
