@@ -39,6 +39,14 @@ body {
 	font-weight: 800;
 	font-size: 40px;
 	line-height: 150%;
+
+	@include mq("desktop-2") {
+		font-size: 36px;
+	}
+
+	@include mq("phone") {
+		font-size: 26px;
+	}
 }
 
 .btn {

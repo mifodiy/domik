@@ -3,6 +3,17 @@
   margin-bottom: 200px;
   position: relative;
 
+  @include mq("desktop-2") {
+    font-size: 14px;
+    margin-bottom: 160px;
+    padding-top: 150px;
+  }
+
+  @include mq("phone") {
+    padding-top: 80px;
+    margin-bottom: 100px;
+  }
+
   &__bg {
     position: absolute;
     top: -100px;
@@ -12,17 +23,49 @@
 
   &__title {
     margin-bottom: 75px;
+
+    @include mq("tablet-2") {
+      margin-bottom: 55px;
+    }
+
+    @include mq("phone") {
+      margin-bottom: 40px;
+    }
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
+
+    @include mq("tablet-2") {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
     max-width: 331px;
     padding-top: 60px;
     position: relative;
+
+    @include mq("tablet-2") {
+      margin-bottom: 40px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 60px;
+
+      @include mq("phone") {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(even) {
+
+      @include mq("tablet-2") {
+        margin-right: 0;
+      }
+    }
+
 
     &::before {
       @include pseudo;
@@ -33,6 +76,11 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+
+      @include mq("phone") {
+        width: 30px;
+        height: 30px;
+      }
     }
 
     &--work::before {
