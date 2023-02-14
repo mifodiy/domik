@@ -2,6 +2,10 @@
 
   margin-bottom: 250px;
 
+  @include mq("desktop-2") {
+    margin-bottom: 150px;
+  }
+
   @include mq("tablet-2") {
     margin-bottom: 150px;
   }
