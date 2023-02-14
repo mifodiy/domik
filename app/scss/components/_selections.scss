@@ -1,8 +1,13 @@
 .selections {
   display: none;
+  margin-bottom: 100px;
 
   @include mq("phone") {
     display: block;
+  }
+
+  &__title {
+    margin-bottom: 40px;
   }
 
   &__list {
