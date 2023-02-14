@@ -2,8 +2,28 @@
 
   margin-bottom: 250px;
 
+  @include mq("tablet-2") {
+    margin-bottom: 150px;
+  }
+
+  @include mq("tablet") {
+    margin-bottom: 80px;
+  }
+
+  @include mq("phone") {
+    margin-bottom: 60px;
+  }
+
   &__title {
     margin-bottom: 80px;
+
+    @include mq("desktop-2") {
+      margin-bottom: 50px;
+    }
+
+    @include mq("phone") {
+      margin-bottom: 40px;
+    }
   }
 
   &__list {
@@ -12,8 +32,12 @@
 
   &__item {
     position: relative;
-    padding: 28px 0;
+    padding: 28px 92px 28px 0;
     border-bottom: 1px solid #C0C2D7;
+
+    @include mq("phone") {
+      padding: 22px 40px 22px 0;
+    }
   }
 
   &__icon {
@@ -27,6 +51,13 @@
     justify-content: center;
     align-items: center;
     transition: background-color 0.5s ease-in-out;
+
+    @include mq("phone") {
+      width: 24px;
+      height: 24px;
+      right: 5px;
+      top: 23px;
+    }
 
     &::before,
     &::after {
@@ -46,6 +77,13 @@
 
   }
 
+  &__name {
+
+    @include mq("phone") {
+      font-size: 16px;
+    }
+  }
+
   &__answer {
     overflow: hidden;
     max-height: 800px;
@@ -55,6 +93,10 @@
     z-index: 2;
     max-width: 1280px;
     transition: all 0.5s ease-in-out;
+
+    @include mq("phone") {
+      font-size: 14px;
+    }
   }
 
   &__input {
