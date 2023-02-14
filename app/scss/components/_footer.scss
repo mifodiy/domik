@@ -2,15 +2,57 @@
   background: linear-gradient(180deg, #161723 0%, #161723 109.24%);
   padding: 80px 0 70px;
   color: #C0C2D7;
-  
+
+  @include mq("phone") {
+    padding-bottom: 150px;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     position: relative;
+
+    @include mq("phone") {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__logo {
     display: block;
+
+    @include mq("phone") {
+      margin-bottom: 31px;
+    }
+  }
+
+  &__img {
+
+    @include mq("desktop-2") {
+      height: 24px;
+      width: 134px;
+    }
+
+    @include mq("phone") {
+      height: 38px;
+      width: 212px;
+    }
+  }
+
+  &__location {
+    display: none;
+    margin-bottom: 20px;
+
+    @include mq("phone") {
+      display: block;
+    }
+  }
+
+  &__catalog {
+
+    @include mq("tablet") {
+      display: none;
+    }
   }
 
   &__title {
@@ -21,9 +63,24 @@
 
   &__item {
 
+    &--info,
+    &--offer,
+    &--select {
+      display: none;
+
+      @include mq("phone") {
+        display: block;
+      }
+    }
+
+    @include mq("phone") {
+      width: 100%;
+    }
+
     &:not(:last-child) {
       margin-bottom: 12px;
     }
+
   }
 
   &__contacts {
@@ -31,10 +88,41 @@
     flex-direction: column;
     justify-content: space-between;
 
+    @include mq("phone") {
+      margin-bottom: 40px;
+      align-items: center;
+    }
   }
 
   &__link {
     line-height: 1.25;
+
+    @include mq("desktop-2") {
+      font-size: 14px;
+    }
+
+    &--info,
+    &--offer,
+    &--select {
+
+      @include mq("phone") {
+        width: 100%;
+      }
+    }
+
+    &--info,
+    &--offer {
+      background-color: transparent;
+      border-color: #fff;
+    }
+
+    &--offer {
+      padding: 7px 13px 9px;
+    }
+
+    &--select {
+      margin-bottom: 40px;
+    }
 
     &--phone {
       padding-left: 27px;
@@ -56,6 +144,25 @@
     }
   }
 
+  &__links {
+
+    @include mq("phone") {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+
+  &__social {
+    width: 205px;
+
+    @include mq("phone") {
+      margin-top: 22px;
+    }
+  }
+
 
   &__copy {
     position: absolute;
@@ -67,5 +174,18 @@
     font-size: 14px;
     line-height: 1.5;
     color: #404256;
+
+    @include mq("desktop-2") {
+      font-size: 12px;
+    }
+
+    @include mq("desktop") {
+      bottom: -50px;
+    }
+
+    @include mq("phone") {
+      position: static;
+      text-align: center;
+    }
   }
 }
