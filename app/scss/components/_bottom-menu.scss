@@ -1,0 +1,77 @@
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 100;
+  padding: 8px 0 12px;
+  border-top: 1px solid #C0C2D7;
+  display: none;
+
+  @include mq("phone") {
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    padding-top: 22px;
+    display: block;
+    position: relative;
+    transition: color 0.5s ease-in-out;
+
+    &::before {
+      @include pseudo;
+      width: 20px;
+      height: 20px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $text;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: cover;
+      transition: background-color 0.5s ease-in-out;
+    }
+
+    &--active {
+      color: $accent;
+
+      &::before {
+        background-color: $accent;
+      }
+    }
+
+    &:hover {
+      color: $accent;
+
+      &::before {
+        background-color: $accent;
+      }
+    }
+
+    &--main::before {
+      mask-image: url("../images/sprite.svg#home-icon");
+    }
+
+    &--catalog::before {
+      mask-image: url("../images/sprite.svg#catalog-icon");
+    }
+
+    &--map::before {
+      mask-image: url("../images/sprite.svg#map-icon");
+    }
+
+    &--favor::before {
+      mask-image: url("../images/sprite.svg#favorite");
+    }
+  }
+}
