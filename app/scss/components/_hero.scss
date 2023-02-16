@@ -8,7 +8,8 @@
   @include mq("phone") {
     text-align: center;
     background-image: url('../images/hero-mobile-bg.png');
-    height: calc(100vh - 130px);
+    background-position: bottom;
+    height: 80vh;
   }
 
   &__inner {

@@ -17,7 +17,7 @@
 	}
 
 	&__button {
-		padding-right: 14px;
+		padding-right: 24px;
 		cursor: pointer;
 		position: relative;
 		text-align: left;
@@ -28,12 +28,12 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      width: 11px;
-      height: 7px;
+      width: 20px;
+      height: 20px;
       mask-image: url("../images/sprite.svg#chevron-down");
       background-color: #fff;
       mask-position: center;
-      mask-size: cover;
+      mask-size: contain;
       mask-repeat: no-repeat;
       transition: transform 0.5s ease-in-out;
       transform-origin: center;
