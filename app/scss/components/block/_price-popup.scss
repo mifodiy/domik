@@ -1,0 +1,131 @@
+.price-popup {
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: 360px;
+  height: auto;
+  background-color: #fff;
+  border: 1px solid #E1E1E1;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0px 4px 80px rgba(5, 9, 22, 0.08);
+transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+transform: translate3d(0, 20px, 0);
+  visibility: hidden;
+  opacity: 0;
+
+  &.active {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+
+  &__input {
+    display: block;
+    width: 134px;
+    padding: 7px 20px 9px;
+    border: 1px solid #C0C2D7;
+    border-radius: 200px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  &__label {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #727488;
+    text-align: center;
+  }
+
+
+
+
+  //style for ionRangeSlider
+  .irs {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .irs-grid {
+    display: none;
+  }
+
+  .irs-bar {
+    display: none;
+  }
+
+  .irs--flat .irs-handle {
+    top: 3px;
+  }
+
+  .irs--flat .irs-handle>i:first-child {
+    width: 8px;
+    height: 23px;
+    border-radius: 200px;
+    background-color: #F4683F;
+  }
+
+  .irs-handle.from>i:first-child {
+    margin-left: -5px;
+  }
+
+  .irs-line {
+    height: 1px;
+    top: 13px;
+  }
+
+  .irs--flat .irs-from,
+  .irs--flat .irs-to,
+  .irs--flat .irs-single {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444444;
+    background-color: transparent;
+    padding: 0;
+    padding-right: 5px;
+    bottom: 10px;
+
+    @include mq("desktop-2") {
+      font-size: 14px;
+    }
+
+
+    &::before {
+      content: "грн";
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: auto;
+      overflow: visible;
+      border: none;
+      margin-left: 0;
+    }
+  }
+
+  .irs-from,
+  .irs-to {
+    bottom: 0;
+    top: auto;
+  }
+
+  .irs-min,
+  irs-max {
+    display: none;
+  }
+
+}
+
+
+
+
+
+

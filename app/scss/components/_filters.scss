@@ -1,0 +1,102 @@
+.filters {
+  padding-top: 150px;
+  font-size: 16px;
+  line-height: 1.25;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    border: 1px solid #C0C2D7;
+    border-radius: 200px;
+    padding: 14px 20px;
+    white-space: nowrap;
+    position: relative;
+
+    &--date {
+      padding: 0;
+
+      &::after {
+        @include pseudo;
+        width: 1px;
+        height: 36px;
+        background-color: #C0C2D7;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &--link {
+      padding: 0;
+      border: none;
+    }
+  }
+
+  &__input {
+    width: 140px;
+    padding: 14px 20px;
+    border: 0 solid transparent;
+    outline: 0;
+    background-color: transparent;
+    padding-left: 20px;
+
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: #C0C2D7;
+    }
+  }
+
+  &__btn {
+    padding-right: 22px;
+    position: relative;
+
+    &::after {
+      @include pseudo;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      mask-image: url("../images/sprite.svg#chevron-down");
+      background-color: $text;
+      mask-position: center;
+      mask-size: contain;
+      mask-repeat: no-repeat;
+    }
+
+    &--filter {
+      padding-right: 0;
+      padding-left: 34px;
+
+      &::before {
+        @include pseudo;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        mask-image: url("../images/sprite.svg#filter-icon");
+        background-color: $text;
+        mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    padding: 14px 30px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
