@@ -1,0 +1,110 @@
+<div class="filters">
+  <div class="container-fluid">
+    <ul class="filters__list">
+      <li class="filters__item">
+        <button class="filters__btn filters__btn--price">Цена</button>
+        <div class="price-popup">
+
+          <input type="text" class="price-popup__range" value="" />
+          <div class="price-popup__box">
+            <label class="price-popup__label price-popup__label--from">
+              мин. цена
+              <input type="text" class="price-popup__input--from price-popup__input" value="0" />
+            </label>
+            <label class="price-popup__label price-popup__label--to">
+              макс. цена
+              <input type="text" class="price-popup__input--to price-popup__input" value="0" />
+            </label>
+          </div>
+
+
+          <button class="price-popup__btn btn">Сохранить</button>
+        </div>
+      </li>
+      <li class="filters__item filters__item--date">
+        <input class="filters__input datepicker-min" type="text" name="bookinkDateMin" id="fromDate" placeholder="От">
+        <input class="filters__input datepicker-max" type="text" name="bookinkDateMax" id="toDate" placeholder="До">
+      </li>
+      <li class="filters__item filters__item--pool">
+        <button class="filters__btn filters__btn--pool">С бассейном</button>
+
+        <div class="waterpool-popup">
+          <ul class="waterpool-popup__list">
+            <li class="waterpool-popup__item">
+              <input class="waterpool-popup__input" id="summer-pool" type="checkbox" name="summer-pool">
+              <label class="waterpool-popup__label" for="summer-pool">летний</label>
+            </li>
+
+            <li class="waterpool-popup__item">
+              <input class="waterpool-popup__input" id="inside-pool" type="checkbox" name="inside-pool">
+              <label class="waterpool-popup__label" for="inside-pool">внутренний</label>
+            </li>
+
+            <li class="waterpool-popup__item">
+              <input class="waterpool-popup__input" id="font-pool" type="checkbox" name="font-pool">
+              <label class="waterpool-popup__label" for="font-pool">купель</label>
+            </li>
+          </ul>
+          <button class="waterpool-popup__btn btn">Сохранить</button>
+        </div>
+      </li>
+      <li class="filters__item filters__item--entertainment">
+        <button class="filters__btn filters__btn--entertainment">Развлечения</button>
+        <div class="entertainment-popup">
+          <ul class="entertainment-popup__list">
+            <li class="entertainment-popup__item">
+              <input class="entertainment-popup__input" id="sauna" type="checkbox" name="sauna">
+              <label class="entertainment-popup__label" for="sauna">сауна или баня (без веников)</label>
+            </li>
+
+            <li class="entertainment-popup__item">
+              <input class="entertainment-popup__input" id="russian-bath" type="checkbox" name="russian-bath">
+              <label class="entertainment-popup__label" for="russian-bath">русская баня на дровах</label>
+            </li>
+
+            <li class="entertainment-popup__item">
+              <input class="entertainment-popup__input" id="hammam" type="checkbox" name="hammam">
+              <label class="entertainment-popup__label" for="hammam">хаммам</label>
+            </li>
+
+            <li class="entertainment-popup__item">
+              <input class="entertainment-popup__input" id="billiard" type="checkbox" name="billiard">
+              <label class="entertainment-popup__label" for="billiard">бильярд</label>
+            </li>
+
+            <li class="entertainment-popup__item">
+              <input class="entertainment-popup__input" id="table-tennis" type="checkbox" name="table-tennis">
+              <label class="entertainment-popup__label" for="table-tennis">настольный теннис</label>
+            </li>
+          </ul>
+          <button class="entertainment-popup__btn btn">Сохранить</button>
+        </div>
+
+      </li>
+      <li class="filters__item">
+        <button class="filters__btn filters__btn--bedplace">Количество спален и спальных мест</button>
+        <div class="bedplace-popup">
+          <label class="bedplace-popup__label">
+            Количество спален
+            <input class="bedplace-popup__input" type="number" value="3" min="1">
+          </label>
+          <label class="bedplace-popup__label">
+            Количество спальных мест
+            <input class="bedplace-popup__input" type="number" value="14" min="1">
+          </label>
+          <button class="bedplace-popup__btn btn">Сохранить</button>
+        </div>
+
+      </li>
+      <li class="filters__item">
+        <button class="filters__btn">Подборки</button>
+      </li>
+      <li class="filters__item filters__item--link">
+        <a class="filters__link btn" href="#">Заявка на подбор</a>
+      </li>
+      <li class="filters__item">
+        <button class="filters__btn filters__btn--filter">Фильтр</button>
+      </li>
+    </ul>
+  </div>
+</div>
