@@ -1,0 +1,48 @@
+.checkbox {
+
+  &__label {
+    cursor: pointer;
+    transition: color 0.5s ease-in-out;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-left: 28px;
+    display: block;
+    position: relative;
+
+    &::after {
+      @include pseudo;
+      width: 18px;
+      height: 18px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #FFFFFF;
+      border: 1px solid #C0C2D7;
+      border-radius: 4px;
+      transition: border-color 0.5s ease-in-out;
+
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+  }
+
+  &__input {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+
+    &:checked+.checkbox__label::after {
+      background-image: url('../images/sprite.svg#checked-on');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $accent;
+      border-color: $accent;
+    }
+
+  }
+}

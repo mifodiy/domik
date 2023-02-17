@@ -1,18 +1,18 @@
-.waterpool-popup {
+.filter-popup {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 70px;
-  width: 225px;
+  width: 620px;
   height: auto;
   background-color: #fff;
   border: 1px solid #E1E1E1;
   border-radius: 20px;
-  padding: 40px 30px;
+  padding: 40px 30px 70px 40px;
   box-shadow: 0px 4px 80px rgba(5, 9, 22, 0.08);
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   transform: translate3d(0, 20px, 0);
-  visibility: hidden;
-  opacity: 0;
+ // visibility: hidden;
+ // opacity: 0;
 
   &.active {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
@@ -20,16 +20,4 @@
     visibility: visible;
     opacity: 1;
   }
-
-  &__list {
-    margin-bottom: 30px;
-  }
-
-  &__item {
-
-    &:not(:last-child) {
-      margin-bottom: 8px;
-    }
-  }
-
 }

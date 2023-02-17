@@ -31,18 +31,27 @@
         <div class="waterpool-popup">
           <ul class="waterpool-popup__list">
             <li class="waterpool-popup__item">
-              <input class="waterpool-popup__input" id="summer-pool" type="checkbox" name="summer-pool">
-              <label class="waterpool-popup__label" for="summer-pool">летний</label>
+              <article class="checkbox">
+                <input class="checkbox__input" id="summer-pool" type="checkbox" name="summer-pool">
+                <label class="checkbox__label" for="summer-pool">летний</label>
+              </article>
+
             </li>
 
             <li class="waterpool-popup__item">
-              <input class="waterpool-popup__input" id="inside-pool" type="checkbox" name="inside-pool">
-              <label class="waterpool-popup__label" for="inside-pool">внутренний</label>
+              <article class="checkbox">
+                <input class="checkbox__input" id="inside-pool" type="checkbox" name="inside-pool">
+                <label class="checkbox__label" for="inside-pool">внутренний</label>
+              </article>
+
             </li>
 
             <li class="waterpool-popup__item">
-              <input class="waterpool-popup__input" id="font-pool" type="checkbox" name="font-pool">
-              <label class="waterpool-popup__label" for="font-pool">купель</label>
+              <article class="checkbox">
+                <input class="checkbox__input" id="font-pool" type="checkbox" name="font-pool">
+                <label class="checkbox__label" for="font-pool">купель</label>
+              </article>
+
             </li>
           </ul>
           <button class="waterpool-popup__btn btn">Сохранить</button>
@@ -53,28 +62,48 @@
         <div class="entertainment-popup">
           <ul class="entertainment-popup__list">
             <li class="entertainment-popup__item">
-              <input class="entertainment-popup__input" id="sauna" type="checkbox" name="sauna">
-              <label class="entertainment-popup__label" for="sauna">сауна или баня (без веников)</label>
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="sauna" type="checkbox" name="sauna">
+                <label class="checkbox__label" for="sauna">сауна или баня (без веников)</label>
+              </article>
+              
             </li>
 
             <li class="entertainment-popup__item">
-              <input class="entertainment-popup__input" id="russian-bath" type="checkbox" name="russian-bath">
-              <label class="entertainment-popup__label" for="russian-bath">русская баня на дровах</label>
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="russian-bath" type="checkbox" name="russian-bath">
+                <label class="checkbox__label" for="russian-bath">русская баня на дровах</label>
+              </article>
+              
             </li>
 
             <li class="entertainment-popup__item">
-              <input class="entertainment-popup__input" id="hammam" type="checkbox" name="hammam">
-              <label class="entertainment-popup__label" for="hammam">хаммам</label>
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="hammam" type="checkbox" name="hammam">
+                <label class="checkbox__label" for="hammam">хаммам</label>
+              </article>
+              
             </li>
 
             <li class="entertainment-popup__item">
-              <input class="entertainment-popup__input" id="billiard" type="checkbox" name="billiard">
-              <label class="entertainment-popup__label" for="billiard">бильярд</label>
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="billiard" type="checkbox" name="billiard">
+                <label class="checkbox__label" for="billiard">бильярд</label>
+              </article>
+              
             </li>
 
             <li class="entertainment-popup__item">
-              <input class="entertainment-popup__input" id="table-tennis" type="checkbox" name="table-tennis">
-              <label class="entertainment-popup__label" for="table-tennis">настольный теннис</label>
+              
+              <article class="checkbox">
+                <input class="checkbox__input" id="table-tennis" type="checkbox" name="table-tennis">
+                <label class="checkbox__label" for="table-tennis">настольный теннис</label>
+              </article>
+              
             </li>
           </ul>
           <button class="entertainment-popup__btn btn">Сохранить</button>
@@ -94,7 +123,7 @@
               <input class="bedplace-popup__input" type="number" value="14" min="1">
             </label>
           </div>
-          
+
           <button class="bedplace-popup__btn btn">Сохранить</button>
         </div>
 
@@ -139,7 +168,7 @@
               </label>
             </li>
           </ul>
-          
+
         </div>
       </li>
       <li class="filters__item filters__item--link">
@@ -147,6 +176,11 @@
       </li>
       <li class="filters__item">
         <button class="filters__btn filters__btn--filter">Фильтр</button>
+
+        <div class="filter-popup">
+
+
+        </div>
       </li>
     </ul>
   </div>
