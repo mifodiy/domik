@@ -42,6 +42,8 @@ $(function () {
   const entertPopUp = document.querySelector(".entertainment-popup");
   const bedplaceBtn = document.querySelector(".filters__btn--bedplace");
   const bedplacePopUp = document.querySelector(".bedplace-popup");
+  const selectionBtn = document.querySelector(".filters__btn--selection");
+  const selectionPopUp = document.querySelector(".selection-popup");
 
   const togglePopUp = function (popUp) {
     popUp.classList.toggle("active");
@@ -71,7 +73,8 @@ $(function () {
   initPopUp(poolBtn, poolPopUp);
   initPopUp(entertBtn, entertPopUp);
   initPopUp(bedplaceBtn, bedplacePopUp);
-  
+  initPopUp(selectionBtn, selectionPopUp);
+
 
 
   let $range = $(".price-popup__range"),
@@ -84,7 +87,6 @@ $(function () {
     to = 0;
 
   $range.ionRangeSlider({
-    //skin: "round",
     grid: true,
     type: "double",
     min: min,
