@@ -44,6 +44,15 @@ $(function () {
   const bedplacePopUp = document.querySelector(".bedplace-popup");
   const selectionBtn = document.querySelector(".filters__btn--selection");
   const selectionPopUp = document.querySelector(".selection-popup");
+  const filterBtn = document.querySelector(".filters__btn--filter");
+  const filterPopUp = document.querySelector(".filter-popup");
+  const filterCloseBtn = document.querySelector(".filter-popup__close");
+
+  if (filterPopUp != null ) {
+    filterCloseBtn.addEventListener('click', () => {
+      filterPopUp.classList.remove("active");
+    });
+  }
 
   const togglePopUp = function (popUp) {
     popUp.classList.toggle("active");
@@ -74,7 +83,7 @@ $(function () {
   initPopUp(entertBtn, entertPopUp);
   initPopUp(bedplaceBtn, bedplacePopUp);
   initPopUp(selectionBtn, selectionPopUp);
-
+  initPopUp(filterBtn, filterPopUp);
 
 
   let $range = $(".price-popup__range"),

@@ -34,6 +34,8 @@
     height: 1px;
     overflow: hidden;
     clip: rect(0 0 0 0);
+    opacity: 0;
+    z-index: 1;
     position: absolute;
 
     &:checked+.checkbox__label::after {

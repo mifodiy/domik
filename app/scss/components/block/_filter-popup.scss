@@ -2,7 +2,7 @@
   position: absolute;
   right: 0;
   top: 70px;
-  width: 620px;
+  //width: 620px;
   height: auto;
   background-color: #fff;
   border: 1px solid #E1E1E1;
@@ -11,8 +11,9 @@
   box-shadow: 0px 4px 80px rgba(5, 9, 22, 0.08);
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   transform: translate3d(0, 20px, 0);
- // visibility: hidden;
- // opacity: 0;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
 
   &.active {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
@@ -20,4 +21,60 @@
     visibility: visible;
     opacity: 1;
   }
+
+  &__title {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__reset {
+    position: absolute;
+    top: 46px;
+    right: 84px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #727488;
+    text-decoration: underline;
+  }
+
+  &__close {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    width: 34px;
+    height: 34px;
+    mask-image: url("../images/sprite.svg#close-icon");
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    background-color: #727488;
+  }
+
+  .type-of-house {
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 8px;
+    }
+
+  }
+
+  .comfort {
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 20px;
+    }
+  }
+
 }
