@@ -1,0 +1,28 @@
+.catalog {
+  padding-top: 40px;
+  margin-bottom: 100px;
+
+  &__list {
+    flex-shrink: 0;
+    height: 730px;
+    overflow-y: scroll;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  #map {
+    height: 730px; /* The height is 400 pixels */
+    width: 100%; /* The width is the width of the web page */
+
+    
+  }
+}

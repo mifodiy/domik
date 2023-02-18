@@ -133,10 +133,10 @@
     right: 20px;
     top: 24px;
     background-color: #fff;
-    width: 92px;
+    width: 93px;
     height: 36px;
     border-radius: 150px;
-    padding: 7px 12px 8px 39px;
+    padding: 7px 11px 8px 39px;
     font-size: 14px;
     line-height: 150%;
     color: #727488;
@@ -238,6 +238,7 @@
   &__title {
     font-size: 24px;
     margin-bottom: 16px;
+    max-width: 350px;
 
     @include mq("desktop-2") {
       font-size: 18px;
