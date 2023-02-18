@@ -1,18 +1,4 @@
 .selection-popup {
-  position: absolute;
-  left: 0;
-  top: 70px;
-  width: 400px;
-  height: auto;
-  background-color: #fff;
-  border: 1px solid #E1E1E1;
-  border-radius: 20px;
-  padding: 40px 30px;
-  box-shadow: 0px 4px 80px rgba(5, 9, 22, 0.08);
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  transform: translate3d(0, 20px, 0);
-  visibility: hidden;
-  opacity: 0;
 
   &.active {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
