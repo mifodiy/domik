@@ -22,6 +22,11 @@ $breakpoints: (
   }
 }
 
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+   }
+}
 
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
   content: $content;

@@ -3,6 +3,10 @@
   font-size: 16px;
   line-height: 1.25;
 
+  @include r(1790) {
+    font-size: 14px;
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
@@ -10,14 +14,17 @@
   }
 
   &__item {
-    border: 1px solid #C0C2D7;
-    border-radius: 200px;
-    padding: 14px 20px;
     white-space: nowrap;
     position: relative;
 
+    @include mq("desktop") {
+      display: none;
+    }
+
     &--date {
       padding: 0;
+      border: 1px solid #C0C2D7;
+      border-radius: 200px;
 
       &::after {
         @include pseudo;
@@ -33,6 +40,17 @@
     &--link {
       padding: 0;
       border: none;
+
+      @include mq("desktop") {
+        display: block;
+      }
+    }
+
+    &--filter {
+
+      @include mq("desktop") {
+        display: block;
+      }
     }
   }
 
@@ -44,21 +62,40 @@
     background-color: transparent;
     padding-left: 20px;
 
+    @include r(1790) {
+      width: 95px;
+      padding: 11px 7px;
+    }
+
     &::placeholder {
       font-size: 16px;
       font-weight: 600;
       line-height: 1.5;
       color: #C0C2D7;
+
+      @include r(1790) {
+        font-size: 14px;
+      }
     }
   }
 
   &__btn {
-    padding-right: 22px;
+    padding: 14px 42px 14px 20px;
+    border: 1px solid #C0C2D7;
+    border-radius: 200px;
     position: relative;
+
+    @include r(1790) {
+      padding: 11px 38px 11px 16px;
+    }
+
+    @include mq("desktop-2") {
+      padding: 11px 35px 11px 13px;
+    }
 
     &::after {
       @include pseudo;
-      right: 0;
+      right: 20px;
       top: 50%;
       transform: translateY(-50%);
       width: 20px;
@@ -68,15 +105,38 @@
       mask-position: center;
       mask-size: contain;
       mask-repeat: no-repeat;
+
+      @include r(1790) {
+        right: 16px;
+      }
+
+      @include mq("desktop-2") {
+        right: 13px;
+      }
     }
 
     &--filter {
-      padding-right: 0;
-      padding-left: 34px;
+      padding-right: 20px;
+      padding-left: 54px;
+
+      @include r(1790) {
+        font-size: 0;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+      }
+
+      @include mq("desktop") {
+        display: block;
+        font-size: 14px;
+        width: auto;
+        height: auto;
+        padding: 11px 20px 11px 54px;
+      }
 
       &::before {
         @include pseudo;
-        left: 0;
+        left: 20px;
         top: 50%;
         transform: translateY(-50%);
         width: 24px;
@@ -86,6 +146,16 @@
         mask-position: center;
         mask-size: contain;
         mask-repeat: no-repeat;
+
+        @include r(1790) {
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        @include mq("desktop") {
+          left: 20px;
+          transform: translate(0, -50%);
+        }
       }
 
       &::after {
@@ -98,5 +168,14 @@
     padding: 14px 30px;
     font-size: 16px;
     line-height: 1.25;
+
+    @include r(1790) {
+      font-size: 14px;
+      padding: 11px 22px;
+    }
+
+    @include mq("desktop-2") {
+      padding: 11px 16px;
+    }
   }
 }
