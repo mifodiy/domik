@@ -574,7 +574,8 @@
 
                     <article class="checkbox">
                       <input class="checkbox__input" id="condition1" type="checkbox" name="condition1">
-                      <label class="checkbox__label" for="condition1">Все включено (нет обязательных дополнительных плат)</label>
+                      <label class="checkbox__label" for="condition1">Все включено (нет обязательных дополнительных
+                        плат)</label>
                     </article>
 
                   </li>
@@ -621,6 +622,374 @@
         </div>
       </li>
     </ul>
+  </div>
+  <div class="mobile-filters">
+    <form class="mobile-filters__form" action="#">
+      <div class="mobile-filters__btns">
+        <button class="mobile-filters__backbtn"><span class="sr-only">Вернуться назад</span></button>
+        <button class="mobile-filters__reset" type="reset">Сбросить фильтры</button>
+      </div>
+      <ul class="mobile-filters__list">
+        <li class="mobile-filters__item">
+          <h2 class="mobile-filters__title title">Даты заезда и выезда</h2>
+          <div class="mobile-filters__date">
+            <input class="mobile-filters__input mobile-filters__input--min" type="text" name="bookinkDateMin" id="fromDate-mob"
+              placeholder="Въезд">
+            <input class="mobile-filters__input mobile-filters__input--max" type="text" name="bookinkDateMax" id="toDate-mob"
+              placeholder="Отъезд">
+          </div>
+
+        </li>
+        <li class="mobile-filters__item">
+          <h2 class="mobile-filters__title title">Количество человек</h2>
+          <label class="mobile-filters__label">
+            <input class="mobile-filters__number" type="number" name="countPeople" id="" placeholder="12">
+          </label>
+        </li>
+        <li class="mobile-filters__item waterpool">
+          <h2 class="mobile-filters__title title">Бассейн</h2>
+          <ul class="waterpool__list">
+            <li class="waterpool__item">
+              <article class="checkbox">
+                <input class="checkbox__input" id="summer-pool-mob" type="checkbox" name="summer-pool">
+                <label class="checkbox__label" for="summer-pool-mob">летний</label>
+              </article>
+
+            </li>
+
+            <li class="waterpool__item">
+              <article class="checkbox">
+                <input class="checkbox__input" id="inside-pool-mob" type="checkbox" name="inside-pool">
+                <label class="checkbox__label" for="inside-pool-mob">внутренний</label>
+              </article>
+
+            </li>
+
+            <li class="waterpool__item">
+              <article class="checkbox">
+                <input class="checkbox__input" id="font-pool-mob" type="checkbox" name="font-pool">
+                <label class="checkbox__label" for="font-pool-mob">купель</label>
+              </article>
+
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-filters__item entertainment">
+          <h2 class="mobile-filters__title title">Развлечения</h2>
+          <ul class="entertainment__list">
+            <li class="entertainment__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="sauna-mob" type="checkbox" name="sauna">
+                <label class="checkbox__label" for="sauna-mob">сауна или баня (без веников)</label>
+              </article>
+
+            </li>
+
+            <li class="entertainment__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="russian-bath-mob" type="checkbox" name="russian-bath">
+                <label class="checkbox__label" for="russian-bath-mob">русская баня на дровах</label>
+              </article>
+
+            </li>
+
+            <li class="entertainment__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="hammam-mob" type="checkbox" name="hammam">
+                <label class="checkbox__label" for="hammam-mob">хаммам</label>
+              </article>
+
+            </li>
+
+            <li class="entertainment__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="billiard-mob" type="checkbox" name="billiard">
+                <label class="checkbox__label" for="billiard-mob">бильярд</label>
+              </article>
+
+            </li>
+
+            <li class="entertainment__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="table-tennis-mob" type="checkbox" name="table-tennis">
+                <label class="checkbox__label" for="table-tennis-mob">настольный теннис</label>
+              </article>
+
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-filters__item bedplace">
+          <h2 class="mobile-filters__title title">Спальни и спальные места</h2>
+          <div class="bedplace__box">
+            <label class="bedplace__label">
+              Количество спален
+              <input class="bedplace__input" type="number" value="3" min="1">
+            </label>
+            <label class="bedplace__label">
+              Количество спальных мест
+              <input class="bedplace__input" type="number" value="14" min="1">
+            </label>
+          </div>
+        </li>
+        <li class="mobile-filters__item">
+          <h2 class="mobile-filters__title title">Цена</h2>
+
+          <div class="price-filter">
+
+            <div class="price-filter__box">
+              <label class="price-filter__label price-filter__label--from">
+                мин. цена
+                <input type="text" class="price-filter__input--from price-filter__input" value="0" />
+              </label>
+              <label class="price-filter__label price-filter__label--to">
+                макс. цена
+                <input type="text" class="price-filter__input--to price-filter__input" value="0" />
+              </label>
+              <input type="text" class="price-filter__range" value="" />
+            </div>
+        </li>
+        <li class="mobile-filters__item locations">
+          <h2 class="mobile-filters__title title">Расположение</h2>
+          <ul class="locations__list">
+            <li class="locations__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="in-city-mob" type="checkbox" name="in-city">
+                <label class="checkbox__label" for="in-city-mob">В городе</label>
+              </article>
+
+            </li>
+
+            <li class="locations__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="in-country-mob" type="checkbox" name="in-country">
+                <label class="checkbox__label" for="in-country-mob">За городом</label>
+              </article>
+
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-filters__item comfort">
+          <h2 class="mobile-filters__title title">Удобства</h2>
+
+          <ul class="comfort__list">
+            <li class="comfort__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="comfort1-mob" type="checkbox" name="comfort1">
+                <label class="checkbox__label" for="comfort1-mob">Wi-Fi</label>
+              </article>
+
+            </li>
+
+            <li class="comfort__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="comfort2-mob" type="checkbox" name="comfort2">
+                <label class="checkbox__label" for="comfort2-mob">Бассейн с подогревом</label>
+              </article>
+
+            </li>
+
+            <li class="comfort__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="comfort3-mob" type="checkbox" name="comfort3">
+                <label class="checkbox__label" for="comfort3-mob">Детская площадка</label>
+              </article>
+
+            </li>
+
+            <li class="comfort__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="comfort4-mob" type="checkbox" name="comfort4">
+                <label class="checkbox__label" for="comfort4-mob">Спортивная площадка</label>
+              </article>
+
+            </li>
+
+            <li class="comfort__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="comfort5-mob" type="checkbox" name="comfort5">
+                <label class="checkbox__label" for="comfort5-mob">Близость к водоему</label>
+              </article>
+
+            </li>
+
+            <li class="comfort__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="comfort6-mob" type="checkbox" name="comfort6">
+                <label class="checkbox__label" for="comfort6-mob">Закрытая парковка</label>
+              </article>
+
+            </li>
+
+            <li class="comfort__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="comfort7-mob" type="checkbox" name="comfort7">
+                <label class="checkbox__label" for="comfort7-mob">Место для выездной регистрации</label>
+              </article>
+
+            </li>
+
+            <li class="comfort__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="comfort8-mob" type="checkbox" name="comfort8">
+                <label class="checkbox__label" for="comfort8-mob">Сцена для артистов</label>
+              </article>
+
+            </li>
+
+            <li class="comfort__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="comfort9-mob" type="checkbox" name="comfort9">
+                <label class="checkbox__label" for="comfort9-mob">Игровая приствка</label>
+              </article>
+
+            </li>
+
+            <li class="comfort__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="comfort10-mob" type="checkbox" name="comfort10">
+                <label class="checkbox__label" for="comfort10-mob">Камин</label>
+              </article>
+
+            </li>
+          </ul>
+
+        </li>
+        <li class="mobile-filters__item type-of-house">
+          <h2 class="mobile-filters__title title">Тип жилья</h2>
+
+          <ul class="type-of-house__list">
+            <li class="type-of-house__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="uniq-house-mob" type="checkbox" name="uniq-house">
+                <label class="checkbox__label" for="uniq-house-mob">Уникальное жилье</label>
+              </article>
+
+            </li>
+
+            <li class="type-of-house__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="log-house-mob" type="checkbox" name="log-house">
+                <label class="checkbox__label" for="log-house-mob">Дом из бруса</label>
+              </article>
+
+            </li>
+
+            <li class="type-of-house__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="town-house-mob" type="checkbox" name="town-house">
+                <label class="checkbox__label" for="town-house-mob">Таунхаус</label>
+              </article>
+
+            </li>
+
+            <li class="type-of-house__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="cottage-mob" type="checkbox" name="cottage">
+                <label class="checkbox__label" for="cottage-mob">Коттедж</label>
+              </article>
+
+            </li>
+
+            <li class="type-of-house__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="chalet-mob" type="checkbox" name="chalet">
+                <label class="checkbox__label" for="chalet-mob">Шале</label>
+              </article>
+
+            </li>
+
+            <li class="type-of-house__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="villa-mob" type="checkbox" name="villa">
+                <label class="checkbox__label" for="villa-mob">Вилла</label>
+              </article>
+
+            </li>
+
+            <li class="type-of-house__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="loft-mob" type="checkbox" name="loft">
+                <label class="checkbox__label" for="loft-mob">Лофт</label>
+              </article>
+
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-filters__item condition">
+          <h2 class="mobile-filters__title title">Условия</h2>
+
+          <ul class="condition_list">
+            <li class="condition__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="condition1-mob" type="checkbox" name="condition1">
+                <label class="checkbox__label" for="condition1-mob">Все включено (нет обязательных дополнительных
+                  плат)</label>
+              </article>
+
+            </li>
+
+            <li class="condition__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="condition2-mob" type="checkbox" name="condition2">
+                <label class="checkbox__label" for="condition2-mob">Сдается на 1-ни сутки в выходные!</label>
+              </article>
+
+            </li>
+            <li class="condition__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="condition3-mob" type="checkbox" name="condition3">
+                <label class="checkbox__label" for="condition3-mob">Разрешено курение кальяна в доме</label>
+              </article>
+
+            </li>
+            <li class="condition__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="condition4-mob" type="checkbox" name="condition4">
+                <label class="checkbox__label" for="condition4-mob">Разрешены вечеринки</label>
+              </article>
+
+            </li>
+            <li class="condition__item">
+
+              <article class="checkbox">
+                <input class="checkbox__input" id="condition5-mob" type="checkbox" name="condition5">
+                <label class="checkbox__label" for="condition5-mob">Можно парится вениками</label>
+              </article>
+
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </form>
   </div>
 </div>
     <section class="catalog">

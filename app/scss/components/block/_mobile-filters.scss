@@ -1,0 +1,279 @@
+.mobile-filters {
+  padding: 40px;
+
+  &__title {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    max-width: 320px;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__date {
+    max-width: 280px;
+    border: 1px solid #C0C2D7;
+    border-radius: 200px;
+    position: relative;
+
+    &::after {
+      @include pseudo;
+      width: 1px;
+      height: 36px;
+      background-color: #C0C2D7;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__input {
+
+    width: 135px;
+    padding: 14px 20px;
+    border: 0 solid transparent;
+    outline: 0;
+    background-color: transparent;
+    padding-left: 20px;
+
+    &::placeholder {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: #C0C2D7;
+
+    }
+  }
+
+  .jq-number {
+    width: 100%;
+    outline: 0;
+    margin-bottom: 50px;
+
+    @include mq("desktop-2") {
+      margin-bottom: 30px;
+    }
+  }
+
+  .jq-number__field input {
+    background-color: #fff;
+    border: 1px solid #C0C2D7;
+    border-radius: 200px;
+    display: block;
+    padding: 11px 20px;
+    width: 100%;
+    outline: 0;
+
+    &::placeholder {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: #C0C2D7;
+    }
+  }
+}
+
+.bedplace {
+
+  &__box {
+   // display: flex;
+    //justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__label {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #727488;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+
+
+
+  .jq-number {
+    position: relative;
+    margin-top: 10px;
+    width: auto;
+  }
+
+  .jq-number__field input {
+    width: 120px;
+    padding: 8px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #fff;
+    border: 1px solid #C0C2D7;
+    border-radius: 200px;
+    text-align: center;
+    color: $text;
+    outline: 0;
+    
+  }
+
+  .jq-number__spin {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    cursor: pointer;
+
+    &::after {
+      @include pseudo;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .minus {
+    border-radius: 3px 0px 0px 3px;
+
+    &::after {
+      background-image: url('../images/sprite.svg#minus-icon');
+    }
+
+  }
+
+  .plus {
+    right: 0;
+    border-radius: 0px 3px 3px 0px;
+
+    &::after {
+      background-image: url('../images/sprite.svg#plus-icon');
+    }
+  }
+
+}
+
+.price-filter {
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+
+  &__input {
+    display: block;
+    width: 134px;
+    padding: 7px 20px 9px;
+    border: 1px solid #C0C2D7;
+    border-radius: 200px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  &__label {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #727488;
+    text-align: center;
+    margin-bottom: 30px;
+
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+
+
+
+
+  //style for ionRangeSlider
+  .irs {
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .irs-grid {
+    display: none;
+  }
+
+  .irs-bar {
+    display: none;
+  }
+
+  .irs--flat .irs-handle {
+    top: 3px;
+  }
+
+  .irs--flat .irs-handle>i:first-child {
+    width: 8px;
+    height: 23px;
+    border-radius: 200px;
+    background-color: #F4683F;
+  }
+
+  .irs-handle.from>i:first-child {
+    margin-left: -5px;
+  }
+
+  .irs-line {
+    height: 1px;
+    top: 13px;
+  }
+
+  .irs--flat .irs-from,
+  .irs--flat .irs-to,
+  .irs--flat .irs-single {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444444;
+    background-color: transparent;
+    padding: 0;
+    padding-right: 5px;
+    bottom: 10px;
+
+    @include mq("desktop-2") {
+      font-size: 14px;
+    }
+
+
+    &::before {
+      content: "грн";
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: auto;
+      overflow: visible;
+      border: none;
+      margin-left: 0;
+    }
+  }
+
+  .irs-from,
+  .irs-to {
+    bottom: 0;
+    top: auto;
+  }
+
+  .irs-min,
+  .irs-max {
+    display: none;
+  }
+
+}
+
+
+
+
+
+

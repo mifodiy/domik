@@ -10,7 +10,7 @@ $(function () {
     $('.location__list').toggleClass('active');
   });
 
-  let dpMin, dpMax;
+  let dpMin, dpMax, dpMinMobFilter, dpMaxMobFilter;
 
   dpMin = new AirDatepicker('.datepicker-min', {
     onSelect({ date }) {
@@ -23,6 +23,20 @@ $(function () {
   dpMax = new AirDatepicker('.datepicker-max', {
 
   })
+
+  dpMinMobFilter = new AirDatepicker('.mobile-filters__input--min', {
+    onSelect({ date }) {
+      dpMax.update({
+        minDate: date
+      })
+    }
+  })
+
+  dpMaxMobFilter = new AirDatepicker('.mobile-filters__input--max', {
+
+  })
+
+  console.log(dpMin);
 
   $(".booking-form__range").ionRangeSlider({
     type: "double",
@@ -48,7 +62,7 @@ $(function () {
   const filterPopUp = document.querySelector(".filter-popup");
   const filterCloseBtn = document.querySelector(".filter-popup__close");
 
-  if (filterPopUp != null ) {
+  if (filterPopUp != null) {
     filterCloseBtn.addEventListener('click', () => {
       filterPopUp.classList.remove("active");
     });
@@ -86,9 +100,9 @@ $(function () {
   initPopUp(filterBtn, filterPopUp);
 
 
-  let $range = $(".price-popup__range"),
-    $inputFrom = $(".price-popup__input--from"),
-    $inputTo = $(".price-popup__input--to"),
+  let $range = $(".price-popup__range, .price-filter__range"),
+    $inputFrom = $(".price-popup__input--from, price-filter__input--from"),
+    $inputTo = $(".price-popup__input--to, .price-filter__input--to"),
     instance,
     min = 0,
     max = 50000,
@@ -143,6 +157,9 @@ $(function () {
     });
   });
 
+  
+
+
 
   const heroSlider = document.querySelector('.hero__slider');
 
@@ -167,6 +184,15 @@ $(function () {
   $(".bedplace-popup__input").styler({
 
   });
+
+  $(".mobile-filters__number").styler({
+
+  });
+
+  $(".bedplace__input").styler({
+
+  });
+  
 
   const header = $(".header");
   const scrollChange = 50;
@@ -199,67 +225,48 @@ $(function () {
     });
   }
 
-//   // Initialize and add the map
-// function initMap() {
-//   // The location of Uluru
-//   const uluru = { lat: -25.344, lng: 131.031 };
-//   // The map, centered at Uluru
-//   const map = new google.maps.Map(document.getElementById("map"), {
-//     zoom: 4,
-//     center: uluru,
-//   });
-//   // The marker, positioned at Uluru
-//   // const marker = new google.maps.Marker({
-//   //   position: uluru,
-//   //   map: map,
-//   // });
-// }
-
-
 
 });
 
 
 function initMap() {
   const uluru = { lat: 50.33260266477901, lng: 30.562024875117906 };
-// The map, centered at Uluru
-const map = new google.maps.Map(document.getElementById("map"), {
-  zoom: 16,
-  center: uluru,
-});
 
-const markers = [
-  [{ lat: 50.332759804350744, lng: 30.55644494483956 }],
-  [{ lat: 50.33178203857188, lng: 30.561368412732218}],
-  [{ lat: 50.33274234442399, lng: 30.558386979397223 }],
-  [{ lat: 50.330507420827956, lng: 30.559098146981718 }],
-  
-];
-
-markers.forEach(([position], i) => {
-  const marker = new google.maps.Marker({
-    position,
-    map,
-    optimized: false,
-    icon: {
-      url: "../images/sprite.svg#marker-icon",
-      size: new google.maps.Size(30,36),
-      scaledSize: new google.maps.Size(30,36)
-    },
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 16,
+    center: uluru,
   });
-});
 
-console.log(markers);
+  const markers = [
+    [{ lat: 50.332759804350744, lng: 30.55644494483956 }],
+    [{ lat: 50.33178203857188, lng: 30.561368412732218 }],
+    [{ lat: 50.33274234442399, lng: 30.558386979397223 }],
+    [{ lat: 50.330507420827956, lng: 30.559098146981718 }],
 
-const mainMarker = new google.maps.Marker({
-      position: uluru,
-      map: map,
+  ];
+
+  markers.forEach(([position], i) => {
+    const marker = new google.maps.Marker({
+      position,
+      map,
+      optimized: false,
       icon: {
-        url: "../images/sprite.svg#map-marker-icon",
-        size: new google.maps.Size(46,55),
-        scaledSize: new google.maps.Size(46,55)
+        url: "../images/sprite.svg#marker-icon",
+        size: new google.maps.Size(30, 36),
+        scaledSize: new google.maps.Size(30, 36)
       },
     });
+  });
+
+  const mainMarker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+    icon: {
+      url: "../images/sprite.svg#map-marker-icon",
+      size: new google.maps.Size(46, 55),
+      scaledSize: new google.maps.Size(46, 55)
+    },
+  });
 
 }
 
