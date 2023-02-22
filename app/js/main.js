@@ -62,6 +62,9 @@ $(function () {
   const filterPopUp = document.querySelector(".filter-popup");
   const filterCloseBtn = document.querySelector(".filter-popup__close");
 
+  const mobileFilters = document.querySelector('.mobile-filters');
+  const mobileFiltersBtn = document.querySelector('.mobile-filters__backbtn');
+
   if (filterPopUp != null) {
     filterCloseBtn.addEventListener('click', () => {
       filterPopUp.classList.remove("active");
@@ -97,7 +100,24 @@ $(function () {
   initPopUp(entertBtn, entertPopUp);
   initPopUp(bedplaceBtn, bedplacePopUp);
   initPopUp(selectionBtn, selectionPopUp);
-  initPopUp(filterBtn, filterPopUp);
+
+
+  if (mobileFilters != null){
+    filterBtn.addEventListener("click", function () {
+
+      if (body.offsetWidth < 1229) {
+        mobileFilters.classList.add('active');
+      } else {
+        initPopUp(filterBtn, filterPopUp);
+      }
+    })
+
+    mobileFiltersBtn.addEventListener("click", function() {
+      mobileFilters.classList.remove('active');
+    })
+  }
+  
+
 
 
   let $range = $(".price-popup__range, .price-filter__range"),
@@ -157,7 +177,7 @@ $(function () {
     });
   });
 
-  
+
 
 
 
@@ -192,7 +212,7 @@ $(function () {
   $(".bedplace__input").styler({
 
   });
-  
+
 
   const header = $(".header");
   const scrollChange = 50;
@@ -224,6 +244,10 @@ $(function () {
       body.classList.remove('lock');
     });
   }
+
+
+
+
 
 
 });
