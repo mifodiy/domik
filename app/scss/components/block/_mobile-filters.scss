@@ -1,9 +1,15 @@
 .mobile-filters {
+  padding-bottom: 50px;
   position: absolute;
-  z-index: 10;
+  z-index: 20;
   background-color: #fff;
   transition: transform 1s ease-in-out;
   transform: translateX(200%);
+
+  @include mq("phone") {
+    height: 100%;
+    top: 0;
+  }
 
   &.active {
     transform: translateY(0);
@@ -19,6 +25,14 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #C0C2D7;
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+
+    @include mq("phone") {
+      position: sticky;
+      top: 0;
+    }
   }
 
   &__backbtn {
@@ -58,6 +72,10 @@
     flex-wrap: wrap;
     gap: 30px;
     padding: 40px;
+
+    @include mq("phone") {
+      gap: 0;
+    }
   }
 
   &__date {
@@ -95,6 +113,15 @@
     }
   }
 
+  &__btn {
+    margin-left: 40px;
+
+    @include mq("phone") {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
   .jq-number {
     width: 100%;
     outline: 0;
@@ -126,9 +153,13 @@
 .bedplace {
 
   &__box {
-   // display: flex;
+    // display: flex;
     //justify-content: space-between;
     margin-bottom: 30px;
+
+    @include mq("phone") {
+      margin-bottom: 0;
+    }
   }
 
   &__label {
@@ -150,6 +181,7 @@
     position: relative;
     margin-top: 10px;
     width: auto;
+    margin-bottom: 0;
   }
 
   .jq-number__field input {
@@ -163,7 +195,7 @@
     text-align: center;
     color: $text;
     outline: 0;
-    
+
   }
 
   .jq-number__spin {
@@ -316,9 +348,3 @@
   }
 
 }
-
-
-
-
-
-
