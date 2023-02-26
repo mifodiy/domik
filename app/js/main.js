@@ -246,6 +246,26 @@ $(function () {
   }
 
 
+  const reviewSlider = document.querySelector('.reviews__slider');
+
+  if (reviewSlider != null) {
+    const reviewSwiper = new Swiper(reviewSlider, {
+      loop: true,
+      slidesPerView: 4,
+      slidesPerGroup: 1,
+      spaceBetween: 40,
+
+      navigation: {
+        nextEl: reviewSlider.nextElementSibling.nextElementSibling,
+        prevEl: reviewSlider.nextElementSibling,
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    })
+  }
 
 
 
@@ -254,41 +274,27 @@ $(function () {
 
 
 function initMap() {
+
   const uluru = { lat: 50.33260266477901, lng: 30.562024875117906 };
 
-  try {
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 16,
-      center: uluru,
-    });
-  } catch {
-    console.log("map undef");
-  }
-
-  try {
-    const mapProduct = new google.maps.Map(document.getElementById("map-product"), {
-      zoom: 16,
-      center: uluru,
-    });
-  } catch {
-
-  }
-
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 16,
+    center: uluru,
+  });
 
   const markers = [
     [{ lat: 50.332759804350744, lng: 30.55644494483956 }],
     [{ lat: 50.33178203857188, lng: 30.561368412732218 }],
     [{ lat: 50.33274234442399, lng: 30.558386979397223 }],
     [{ lat: 50.330507420827956, lng: 30.559098146981718 }],
-
+  
   ];
 
-try {
   markers.forEach(([position], i) => {
 
     const marker = new google.maps.Marker({
       position,
-      //map,
+      map,
       optimized: false,
       icon: {
         url: "../images/sprite.svg#marker-icon",
@@ -298,12 +304,11 @@ try {
     });
 
   });
-} catch {
 
-}
 
   const mainMarker = new google.maps.Marker({
     position: uluru,
+    map,
     icon: {
       url: "../images/sprite.svg#map-marker-icon",
       size: new google.maps.Size(46, 55),
@@ -311,15 +316,41 @@ try {
     },
   });
 
-  //if (mapProduct != null) {
-    mainMarker.setMap(mapProduct);
-  //}
-  if (map != null) {
-    mainMarker.setMap(map);
+}
+
+function initMap2() {
+
+  const uluru = { lat: 50.33260266477901, lng: 30.562024875117906 };
+
+  const map = new google.maps.Map(document.getElementById("map-product"), {
+    zoom: 16,
+    center: uluru,
+  });
+
+
+  const mainMarker = new google.maps.Marker({
+    position: uluru,
+    map,
+    icon: {
+      url: "../images/sprite.svg#map-marker-icon",
+      size: new google.maps.Size(46, 55),
+      scaledSize: new google.maps.Size(46, 55)
+    },
+  });
+
+}
+
+const catalogMap = document.getElementById("map");
+const productMap = document.getElementById("map-product");
+
+function initialize() {
+  if(typeof(catalogMap) != 'undefined' && catalogMap != null) {
+    initMap();
+  }
+
+  if(typeof(productMap) != 'undefined' && productMap != null) {
+    initMap2();
   }
 }
 
-
-
-
-window.initMap = initMap;
+window.initialize = initialize;
