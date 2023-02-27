@@ -5,7 +5,6 @@ $(function () {
   });
   $('.location__list-item').on('click', function () {
     var itemValue = $(this).data('value');
-    console.log(itemValue);
     $('.location__button span').text($(this).text()).parent().attr('data-value', itemValue);
     $('.location__list').toggleClass('active');
   });
@@ -36,7 +35,7 @@ $(function () {
 
   })
 
-  console.log(dpMin);
+
 
   $(".booking-form__range").ionRangeSlider({
     type: "double",
@@ -269,8 +268,23 @@ $(function () {
 
 
 
-
 });
+
+const productFavorBtn = document.querySelector('.product__favor');
+const productSvg = document.getElementById('product-favourite');
+const pathToFavour = 'images/sprite.svg#favorite';
+const pathToFavourActive = 'images/sprite.svg#favorite-active';
+
+if (productSvg != null) {
+  productFavorBtn.addEventListener('click', function () {
+    if (productSvg.getAttribute('xlink:href') == pathToFavour) {
+      productSvg.setAttribute('xlink:href', pathToFavourActive)
+    } else {
+      productSvg.setAttribute('xlink:href', pathToFavour)
+    }
+  })
+}
+
 
 
 function initMap() {
@@ -287,7 +301,7 @@ function initMap() {
     [{ lat: 50.33178203857188, lng: 30.561368412732218 }],
     [{ lat: 50.33274234442399, lng: 30.558386979397223 }],
     [{ lat: 50.330507420827956, lng: 30.559098146981718 }],
-  
+
   ];
 
   markers.forEach(([position], i) => {
@@ -344,11 +358,11 @@ const catalogMap = document.getElementById("map");
 const productMap = document.getElementById("map-product");
 
 function initialize() {
-  if(typeof(catalogMap) != 'undefined' && catalogMap != null) {
+  if (typeof (catalogMap) != 'undefined' && catalogMap != null) {
     initMap();
   }
 
-  if(typeof(productMap) != 'undefined' && productMap != null) {
+  if (typeof (productMap) != 'undefined' && productMap != null) {
     initMap2();
   }
 }

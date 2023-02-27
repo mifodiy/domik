@@ -204,7 +204,12 @@
       <h1 class="product__title title">Горки-Сухаревские 1</h1>
       <p class="product__address">Столичное шоссе 4</p>
       <button class="product__share"><span class="sr-only">Поделиться</span></button>
-      <button class="product__favor"><span class="sr-only">Добавить в избранное</span></button>
+      <button class="product__favor">
+        <svg class="product__svg">
+          <use id="product-favourite" xlink:href="images/sprite.svg#favorite"></use>
+        </svg>
+        <span class="sr-only">Добавить в избранное</span>
+      </button>
     </header>
     <div class="product__gallery">
       <img class="product__img" src="images/product/product-1.jpg" alt="" width="695">
@@ -214,7 +219,8 @@
       <img class="product__img" src="images/product/product-5.jpg" alt="" width="335">
       <div class="product__links">
         <a class="product__link product__link--more" href="">Смотреть больше фото</a>
-        <a class="product__link product__link--video" href="">Смотреть видео</a>
+        <a class="product__link product__link--video" href="https://www.youtube.com/watch?v=MGrQa4ElR8M"
+          data-fancybox>Смотреть видео</a>
       </div>
     </div>
 
@@ -357,9 +363,12 @@
 
     <div class="video-map-container">
       <div class="product__video">
-        <a class="product__play" href=""><span class="sr-only">Запустить видео</span></a>
+        <a class="product__play" href="https://www.youtube.com/watch?v=MGrQa4ElR8M" data-fancybox><span
+            class="sr-only">Запустить видео</span></a>
       </div>
-      <div class="product__map"><div id="map-product"></div></div>
+      <div class="product__map">
+        <div id="map-product"></div>
+      </div>
     </div>
   </div>
 </section>
