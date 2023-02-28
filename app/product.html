@@ -200,34 +200,37 @@
   <main class="main">
     <section class="product">
   <div class="container">
-    <header class="product__header">
-      <h1 class="product__title title">Горки-Сухаревские 1</h1>
-      <p class="product__address">Столичное шоссе 4</p>
-      <button class="product__share"><span class="sr-only">Поделиться</span></button>
-      <button class="product__favor">
-        <svg class="product__svg">
-          <use id="product-favourite" xlink:href="images/sprite.svg#favorite"></use>
-        </svg>
-        <span class="sr-only">Добавить в избранное</span>
-      </button>
-    </header>
-    <div class="product__gallery">
-      <img class="product__img" src="images/product/product-1.jpg" alt="" width="695">
-      <img class="product__img" src="images/product/product-2.jpg" alt="" width="350">
-      <img class="product__img" src="images/product/product-3.jpg" alt="" width="335">
-      <img class="product__img" src="images/product/product-4.jpg" alt="" width="350">
-      <img class="product__img" src="images/product/product-5.jpg" alt="" width="335">
-      <div class="product__links">
-        <a class="product__link product__link--more" href="">Смотреть больше фото</a>
-        <a class="product__link product__link--video" href="https://www.youtube.com/watch?v=MGrQa4ElR8M"
-          data-fancybox>Смотреть видео</a>
+    <div class="product__wrapper">
+      <header class="product__header">
+        <h1 class="product__title title">Горки-Сухаревские 1</h1>
+        <p class="product__address">Столичное шоссе 4</p>
+        <button class="product__share"><span class="sr-only">Поделиться</span></button>
+        <button class="product__favor">
+          <svg class="product__svg">
+            <use id="product-favourite" xlink:href="images/sprite.svg#favorite"></use>
+          </svg>
+          <span class="sr-only">Добавить в избранное</span>
+        </button>
+      </header>
+      <div class="product__gallery">
+        <img class="product__img" src="images/product/product-1.jpg" alt="" width="695">
+        <img class="product__img" src="images/product/product-2.jpg" alt="" width="350">
+        <img class="product__img" src="images/product/product-3.jpg" alt="" width="335">
+        <img class="product__img" src="images/product/product-4.jpg" alt="" width="350">
+        <img class="product__img" src="images/product/product-5.jpg" alt="" width="335">
+        <div class="product__links">
+          <a class="product__link product__link--more" href="">Смотреть больше фото</a>
+          <a class="product__link product__link--video" href="https://www.youtube.com/watch?v=MGrQa4ElR8M"
+            data-fancybox>Смотреть видео</a>
+        </div>
       </div>
     </div>
+    
 
     <div class="product__inner">
       <section class="product__info">
         <div class="product__feature feature">
-          <h2 class="feature__title title">Информация о доме</h2>
+          <h2 class="feature__title product__subtitle title">Информация о доме</h2>
           <ul class="feature__list">
             <li class="feature__item">
               <span class="feature__name">Тип жилья</span>
@@ -299,7 +302,8 @@
         </div>
       </section>
       <section class="product__price price">
-        <h2 class="product__subtitle title">Стоимость</h2>
+        <h2 class="product__subtitle price__title title">Стоимость</h2>
+
         <ul class="price__list">
           <li class="price__item">
             <ul class="price__days">

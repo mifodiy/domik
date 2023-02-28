@@ -250,9 +250,30 @@ $(function () {
   if (reviewSlider != null) {
     const reviewSwiper = new Swiper(reviewSlider, {
       loop: true,
-      slidesPerView: 4,
+      slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: 40,
+
+      breakpoints: {
+
+        320: {
+          slidesPerView: 1.5,
+
+        },
+        480: {
+          slidesPerView: 2,
+
+        },
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 40
+        },
+
+        991: {
+          slidesPerView: 4,
+          spaceBetween: 40
+        },
+      },
 
       navigation: {
         nextEl: reviewSlider.nextElementSibling.nextElementSibling,

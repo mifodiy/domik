@@ -1,6 +1,14 @@
 .reviews {
   margin-bottom: 200px;
 
+  @include mq("desktop-2") {
+    margin-bottom: 150px;
+  }
+
+  @include mq("tablet-2") {
+    margin-bottom: 100px;
+  }
+
   &__title {
     font-size: 24px;
     margin-bottom: 80px;
@@ -12,6 +20,7 @@
 
   &__img {
     max-width: 320px;
+    width: 100%;
     border-radius: 20px;
     object-fit: cover;
   }
@@ -25,6 +34,13 @@
     width: 40px;
     height: 40px;
 
+    @include mq("desktop-2") {
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+
     &::after {
       content: '';
       width: 40px;
@@ -32,11 +48,20 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+
+      @include mq("desktop-2") {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 
   .swiper-button-prev {
     left: -60px;
+
+    @include mq("desktop-2") {
+      left: 22px;
+    }
 
     &::after {
       background-image: url("../images/sprite.svg#arrow-left-icon");
@@ -46,13 +71,17 @@
   .swiper-button-next {
     right: -60px;
 
+    @include mq("desktop-2") {
+      right: 22px;
+    }
+
     &::after {
       background-image: url("../images/sprite.svg#arrow-right-icon");
     }
   }
 
   .swiper-pagination {
-bottom: 0;
+    bottom: 0;
   }
 
   .swiper-pagination-bullet {
